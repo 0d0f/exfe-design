@@ -1,0 +1,209 @@
+html,body{
+	width: 320px;
+	height: 568px;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	background-color: black;
+}
+
+.homescreen{
+	width: 320px;
+	height: 568px;
+	overflow: hidden;
+	position: relative;
+	background: url(default-568h@2x.png) no-repeat;
+	background-size: 100%;
+}
+
+.login{
+	width: 320px;
+	height: 568px;
+	position: absolute;
+	bottom: -518px;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+
+}
+
+.login_unfold{
+	bottom: 0;
+}
+
+.login .titlebar{
+	height: 50px;
+	width: 100%;
+	background-image: -moz-linear-gradient(90deg, white 0%, rgba(255, 255, 255, 0.5) 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, from(white), to(rgba(255, 255, 255, 0.5)));
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+	text-shadow: 0 -1px 1px rgba(255, 255, 255, 0.35);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	color: #444;
+}
+
+.login .content{
+	height: 524px;
+	position: absolute;
+	top: 50px;
+	width: 320px;
+	background: url(pattern.png) repeat scroll 0 0 #ddd;
+}
+
+
+.login .content .textframe{
+	width: 290px;
+	margin: 0 auto;
+	margin-top: 15px;
+	border-radius: 4px;
+	background-color: #fafafa;
+	box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2)inset,
+				0px 1px 4px rgba(0,0,0,0.4)inset,
+				0px 1px 0px rgba(255,255,255,0.25);
+	overflow:hidden ;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	position: relative;
+}
+
+
+.login .content .textframe table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.login .content .textframe tr{
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+}
+
+.login .content .textframe textarea{
+	border-style: none;
+	background-color: transparent;
+	width: 80%;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	padding-top: 8px;
+	color: #aaa;
+	font: 300 16px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.login .content .textframe textarea:focus{
+	outline: none;
+}
+
+.login .content .textframe .email{
+	position: relative;
+	padding-left: 42px;;
+}
+
+.login .content .textframe .icon{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50px;
+	height: 50px;
+}
+
+.login .content .textframe .icon{
+	background: url(email.png) no-repeat 50% 50%;
+}
+
+.login .content .textframe .portrait{
+width: 40px;
+height: 40px;
+position: absolute;
+top: 6px;
+left: 5px;
+background-size: contain;
+background: url(portrait.png) no-repeat 50% 50%;
+display: none;
+}
+
+.login .content .textframe .email .nextbtn{
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: url(nextbtn.png) no-repeat 60% 50%;
+	background-size: 50%;
+}
+
+.login .content .textframe .email .clearbtn{
+	background-image: url(clearbtn.png);
+}
+
+.login .content .textframe .admitbtn{
+	background: -webkit-gradient(linear, left bottom, left top, from(#3a6ea5), to(#5a8bbe)) red;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.33);
+	border: 2px solid rgba(0, 0, 0, 0);
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 16px;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.33);
+	border-bottom-style: solid;
+	border-bottom-color: rgba(0, 0, 0, 0.3);
+	border-right-style: solid;
+	border-right-color: rgba(0, 0, 0, 0.14);
+	border-left-style: solid;
+	border-left-color: rgba(0, 0, 0, 0.14);
+}
+
+.login .content .textframe .admitbtn:active{
+	background: -webkit-gradient(linear, left bottom, left top, from(#2f4966), to(#426c97)) red;
+
+}
+
+.login .content .oauthframe{
+	width: 290px;
+	margin: 0 auto;
+	margin-top: 15px;
+	border: 3px solid rgba(0, 0, 0, 0.1);
+	border-radius: 4px;
+	overflow: hidden;
+	border-top-style: solid;
+}
+
+.login .content .oauthframe table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.login .content .oauthframe tr{
+	height: 50px;
+	border-bottom: 1px solid #ccc;
+	background: -webkit-gradient(linear, left bottom, left top, from(#fafafa), to(#f3f3f3));
+}
+
+.login .content .oauthframe tr:active{
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#ececec), to(#e4e4e4));
+}
+
+.login .content .oauthframe td{
+	font-size: 14px;
+	color: #333;
+	font-weight: 300;
+}	
+
+.login .content .oauthframe table tr:last-child{
+	border-bottom-style: none;
+}
+
+.login .content .oauthframe td{
+	background: no-repeat 50% 50%;
+}
+
+.login .content .oauthframe .icon{
+	width: 50px;
+}
+
+.login .content .oauthframe .twitter{
+	background-image: url(twitter.png);
+}
+
+.login .content .oauthframe .facebook{
+	background-image: url(facebook.png);
+}

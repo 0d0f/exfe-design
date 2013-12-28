@@ -1,0 +1,26 @@
+.spin-warpper{
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+
+.spin{
+	width: 16px;
+	height: 16px;
+	background-color: #9a9a9a;
+	-webkit-animation: spins 1s linear 0s infinite;
+}
+
+@-webkit-keyframes spins {
+	0%{
+		border-radius: 0px;
+	}
+	50%{
+		border-radius: 8px;
+		-webkit-transform: rotate(90deg);
+	}
+	100%{
+		border-radius: 0px;
+		-webkit-transform: rotate(270deg);
+	}
+}

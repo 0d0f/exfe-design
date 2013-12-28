@@ -1,0 +1,57 @@
+body, html{
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#aadbf2), from(#68b5de), color-stop(0.108, #206ca2), color-stop(0.131, #1d6396), color-stop(0.191, #195381), color-stop(0.236, #164975), color-stop(0.331, #0c3a63), color-stop(0.617, #021e3b), to(#01172f));
+	margin: 0;
+}
+
+.outer-warpper{
+	position: relative;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
+	top: 50%;
+	margin-top: -200px;
+	-webkit-animation: opac 2s ease-in-out 0s infinite alternate;
+}
+
+.outer{
+	width: 300px;
+	height: 300px;
+	-webkit-mask-box-image: url(404_radar_mask.png) 50% 50% 50% 50% repeat stretch;
+	-webkit-animation: outer 2s linear 0s infinite;
+}
+
+.inner{
+	width: 300px;
+	height: 300px;
+	background-image: url(EXFE_300@2x.png);
+	background-size: 100%;
+	-webkit-animation: inner 2s linear 0s infinite;
+	
+}
+
+@-webkit-keyframes outer{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes inner{
+	0%{
+		-webkit-transform: rotate(360deg);
+	}
+	100%{
+		-webkit-transform: rotate(0deg);
+	}
+}
+
+@-webkit-keyframes opac{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}

@@ -1,0 +1,47 @@
+$.fn.dz = function (handleClass, selectedClassName, mappingIdPrefix, mappingIdSuffix) {
+	var pin = false;
+	var currentSelect;
+	var currentHover;
+	$("."+handleClass).hover(function(){
+		if (!pin) {
+			currentHover = $(this).attr("id");
+			$("#"+mappingIdPrefix+currentHover+mappingIdSuffix).show();
+		}
+		},function(){
+			if (pin) {
+				return;
+			}
+			else {
+				currentHover = $(this).attr("id");
+				$("#"+currentHover+"-description").hide();
+			}
+		}
+	)
+	
+	$("."+handleClass).click(function(){
+		if (!pin) {
+			pin = true;
+			$(this).addClass(selectedClassName)
+			currentSelect = $(this).attr("id");
+			$("#"+mappingIdPrefix+currentSelect+mappingIdSuffix).show();		
+		}
+		else {
+			if ($(this).attr("id")==currentSelect) {
+				pin = false;
+				$(this).removeClass(selectedClassName);
+			}
+			else {
+				$("#"+currentSelect).removeClass(selectedClassName);
+				$("#"+mappingIdPrefix+currentSelect+mappingIdSuffix).hide();
+				$(this).addClass(selectedClassName);
+				currentSelect = $(this).attr("id");
+				$("#"+mappingIdPrefix+currentSelect+mappingIdSuffix).show();	
+			}
+		}
+	})
+}
+
+
+
+
+

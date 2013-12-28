@@ -1,0 +1,35 @@
+背景：
+最底层黑色背景，填充星空贴图，其上覆盖一层渐变	
+background: -moz-linear-gradient(90deg, #a0d3ef 0%, #86acdc 1.6%, #35598a 5.6%, rgba(21, 26, 33, 0.85) 10.5%, rgba(87, 95, 159, 0.06) 100%), url('bg_pattern.png') #000000;
+background: -webkit-gradient(linear, left bottom, left top, from(#a0d3ef), color-stop(0.016, #86acdc), color-stop(0.056, #35598a), color-stop(0.105, rgba(21, 26, 33, 0.85)), to(rgba(87, 95, 159, 0.06))), url('bg_pattern.png') #000000;
+
+照片墙：
+上边距60px，下边距68px，图片间距12px
+
+图片：
+外框样式：
+background-color: rgba(255,255,255,0.05);
+box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.12) inset;
+-webkit-transition: all 0.15s ease-in-out 0s;
+
+hover时下边缘展开30px显示信息，样式改变为：
+transform: scale(1.01);
+box-shadow: 0px 1px 12px rgba(0,0,0,0.4);
+background-color: rgba(255,255,255,0.9);
+同时图片覆盖一层opacity:0.04的白色
+
+图片样式：
+box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset,0 1px 0 rgba(255,255,255,0.2) inset;
+
+信息内容以淡入方式出现，即：
+opacity: 0; 
+-webkit-transition: opacity 0.3s ease-in-out 0s;
+opacity: 1;
+
+图片信息：
+头像尺寸24*24，圆角3px，左边距3px
+标题文字13px，#808080，左边距34px，右边距40px
+如果没有标题 或者“图片宽度－标题文字宽度>180px”,则显示时间，右边距4px
+如果有地理数据，显示地点图标，尺寸24*24，右边距4px，同时时间文字左移24px
+
+

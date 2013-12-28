@@ -1,0 +1,151 @@
+body,html{
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	background-color: black;
+	margin: 0;
+}
+
+.screen{
+	width: 320px;
+	height: 480px;
+	background-color: #fafafa;
+	position: relative;
+}
+
+.title{
+	width: 120px;
+	height: 44px;
+	color: #3783d5;
+	font-size: 22px;
+	margin: 0 auto;
+	line-height: 44px;
+}
+
+.title .lighter{
+	font-weight: 300;
+}
+
+.title .bolder{
+	font-weight: 500;
+}
+
+.manual{
+	background-color:#3783d5 ;
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	top: 10px;
+	left: 216px;
+	border-radius: 3px;
+	-webkit-transform: translateZ(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+.manual-extend{
+	width: 100px;
+	height: 300px;
+	-webkit-transform: rotate(90deg);
+	top: -60px;
+	left: 110px;
+	box-shadow: 1px 0px 5px rgba(0,0,0,0.3),
+				0px 0px 0px 1px #4786c9;
+	
+}
+
+.tri{
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: 5px solid;
+	border-color: transparent 3783d5 transparent transparent;
+	left: -10px;
+	top: 6px;
+	-webkit-transition: opacity 0.2s ease-in-out 0s;
+}
+
+.tri-0{
+	opacity: 0;
+}
+
+.tri-extend-0{
+	position: absolute;
+	height: 0;
+	width: 0;
+	border: 5px solid;
+	border-color: transparent 3783d5 transparent transparent;
+	left: -10px;
+	top: 140px;	
+	opacity: 0;
+	-webkit-transition: opacity 0s ease-in-out 0s;
+}
+
+.tri-extend-1{
+	opacity: 1;
+	-webkit-transition: opacity 0.1s linear 0.233s;
+}
+
+.wave{
+	height: 22px;
+	width: 22px;
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: opacity 0.2s ease-in-out 0s;
+}
+
+.wave-0{
+	opacity: 0;
+}
+
+.circle{
+	height: 47px;
+	width: 47px;
+	border: 3px solid white;
+	border-radius: 100px;
+	position: absolute;
+	top: -16px;
+	left: -30px;
+	-webkit-animation: wave 1s linear 0s infinite;
+}
+
+@-webkit-keyframes wave{
+	from{
+		-webkit-transform: scale(0);
+		opacity: 1;
+	}
+	to{
+		-webkit-transform: scale(1.4);
+		opacity: 0;
+	}
+}
+
+.circle-1{
+	-webkit-animation-delay: 0s;
+} 
+
+.circle-2{
+	-webkit-animation-delay: 0.2s;
+}
+
+.circle-3{
+	-webkit-animation-delay: 0.4s;
+}
+
+.content{
+	/background-color:  red;
+	width: 280px;
+	height: 80px;
+	-webkit-transform: rotate(-90deg);
+	position: absolute;
+	top: 0px;
+	left: -90px;
+	top: 110px;
+	opacity: 0;
+	-webkit-transition: opacity 0s linear 0s;
+	
+	color: white;
+	font-size: 14px;
+}
+.content-1{
+	opacity: 1;
+	-webkit-transform: rotate(-90deg);
+	-webkit-transition-duration: 0.8s;
+}

@@ -1,0 +1,85 @@
+body,html{
+	background-color: #f5f5f5;
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	color: #808080;
+}
+
+.btn{
+	position: relative;
+}
+
+.original{
+	box-shadow: 0px 1px 6px rgba(0,0,0,0.2);
+	height: 40px;
+	width: 40px;
+	position: relative;
+	border-radius: 3px;
+	-webkit-transition: all 0.3s ease-in-out;
+	background: url(share.png) white;
+}
+
+.original:nth-child(n){
+	text-align: center;
+	line-height: 40px;
+}
+
+.cell{
+	background-color: white;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 0;
+	-webkit-transition: all 0.3s ease-in-out ;
+}
+
+.cell:hover{
+	background-color: #e6f4ff;
+}
+
+.cell:before:hover {
+    border: 5px solid #000;
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+}
+
+.cell_1{
+	z-index: -1;
+	background: url(facebook.png) no-repeat 50% 50% white;
+}
+
+.cell_2{
+	z-index: -2;
+	background: url(twitter.png) no-repeat 50% 50% white;
+}
+
+.cell_3{
+	z-index: -3;
+	border-radius: 0 0 3px 3px;
+}
+
+.original:hover .cell_1, .original:hover .cell_2, .original:hover .cell_3{
+	-webkit-transition:all 0.3s ease-in-out;
+	box-shadow: 0 0 6px rgba(0,0,0,0.2);
+	
+}
+
+.original:hover .cell_1{
+	-webkit-transform: translate(0,40px);
+}
+
+.original:hover .cell_2{
+	-webkit-transform: translate(0,80px);
+}
+
+.original:hover .cell_3{
+	-webkit-transform: translate(0,120px);
+}
+
+.original:hover{
+		border-radius: 3px 3px 0 0;
+		-webkit-transition: all 0.3s ease-in-out;
+}

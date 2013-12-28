@@ -1,0 +1,466 @@
+body,html{
+	height: 100%;
+	width: 100%;
+	min-height: 800px;
+	margin:0;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.bg{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: -moz-linear-gradient(90deg, #a0d3ef 0%, #86acdc 1.6%, #35598a 5.6%, rgba(21, 26, 33, 0.85) 10.5%, rgba(87, 95, 159, 0.06) 100%), url('bg_pattern.png') #000000;
+	background: -webkit-gradient(linear, left bottom, left top, from(#a0d3ef), color-stop(0.016, #86acdc), color-stop(0.056, #35598a), color-stop(0.105, rgba(21, 26, 33, 0.85)), to(rgba(87, 95, 159, 0.06))), url('bg_pattern.png') #000000;
+}
+
+.wall{
+	position: fixed;
+	top: 40px;
+	height: 700px;
+	width: 1000px;
+	overflow-y: hidden;
+	/background-color: #9e9e9e;
+}
+
+.root{
+	padding: 0px;
+	position: relative;
+	margin: 10px;
+}
+
+.root_1{
+	height: 400px;
+	width: 600px;
+}
+
+.root_2{
+	height: 200px;
+	width: 200px;
+}
+
+.root_3{
+	height: 200px;
+	width: 200px;
+	display: inline-block;
+	left: 210px;
+	top: -220px;
+}
+
+.root_4{
+}
+
+.pic{
+	position: absolute;
+	/height: 100%;
+	/width: 100%;
+	background-color: rgba(255,255,255,0.05);
+	box-shadow: 0px 0px 1px 1px rgba(255,255,255,0.12) inset;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	/margin: -25px;
+	/padding: 25px;	
+	-webkit-transition: all 0.15s ease-in-out 0s;
+}
+
+.pic_1{
+	height: 400px;
+	width: 600px;
+	background: url('1.jpg') no-repeat;
+	background-size:auto 400px;
+}
+
+.pic_2{
+	height: 200px;
+	width: 200px;
+	background: url('2.jpg') no-repeat;
+	background-size:auto 200px;
+}
+
+
+.pic:hover{
+	margin-bottom:-30px;
+	padding_top: 30px;
+	/-webkit-transform-origin: top;
+	-webkit-transform: scale(1.01);
+	box-shadow: 0px 1px 12px rgba(0,0,0,0.4);
+	z-index: 3;
+	background-color: rgba(255,255,255,0.9);
+}
+
+.pic:after{
+	opacity: 0;
+	background-color: white;
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.pic:hover:after{
+	opacity: 0.04;
+}
+
+.frame{
+	box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset,0 1px 0 rgba(255,255,255,0.2) inset;
+}
+
+.meta{
+	width: 100%;
+	height: 30px;
+	position: relative;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	z-index: 4;
+	opacity: 0;
+	/background-color: red;
+}
+
+.pic:hover >.meta{
+	opacity: 1;
+	-webkit-transition: opacity 0.3s ease-in-out 0s;
+
+}
+
+.date{
+	display: inline-block;
+	line-height: 33px;
+	font-size: 13px;
+	color: #808080;
+	right: 32px;
+	position: absolute;
+}
+
+.portrait{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	bottom: -2px;
+	left: -2px;
+	margin: 5px;
+	border-radius: 3px;
+}
+
+.portrait_1{
+	background-image: url('dzinlife.png');
+}
+
+
+.dock{
+	width: 88%;
+	height: 140px;
+	/background-color: red;
+	position: fixed;
+	bottom: 50%;
+	left: 50%;
+	margin-left:-44%;
+	/-webkit-transform-origin: left;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: perspective(1000px) rotateY(0deg)translateY(2560px);
+	-webkit-transition: all 1s ease-in-out 0s;
+}
+
+.dock_upper{
+	height: 120px;
+	width: 100%;
+	-webkit-transform-origin: bottom center;
+	-webkit-transform:perspective(3000) rotateX(90deg) rotateZ(-0deg);
+	box-shadow: 0 -2px 0px rgba(255,255,255,0.3)inset;
+	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.36)));
+	background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.36) 100%);
+}
+
+.dock_under{
+	height: 24px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.55);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+	position: absolute;
+	top: 120px;
+	-webkit-transform: perspective(3000) rotateZ(-0deg);
+	/-webkit-transform-origin: top center;
+}
+
+.views{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.75);
+	position: fixed;
+	top: 0;
+	z-index: 5;
+}
+
+.pic_area{
+	height: 100%;
+    display: -webkit-flex;
+	-webkit-justify-content: center;
+
+}
+
+.pic_warper{
+	-webkit-box-flex:1;
+	-webkit-align-self: center;
+}
+
+.pic_info{
+	width: 330px;
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+
+
+.pic_title{
+	color: white;
+	font-size: 36px;
+	position: absolute;
+	right: 100%;
+	width: 400px;
+	text-align: right;
+	padding-top: 12px;
+	padding-right: 16px;
+}
+
+.pic_info_head{
+	height: 50px;
+	/border-radius: 0 0 3px 3px;
+	background-image: -moz-linear-gradient( 90deg, rgba(128,128,128,0.75) 0%, rgba(255,255,255,0.5) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgba(128,128,128,0.75) 0%, rgba(255,255,255,0.5) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgba(128,128,128,0.75) 0%, rgba(255,255,255,0.5) 100%);
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+	padding: 10px;
+	position: relative;
+	z-index: 2;
+}
+
+.pic_info_portrait{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	float: left;
+}
+
+.pic_info_name{
+	position: relative;
+	left: 10px;
+	color: white;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.pic_info_time{
+	position: relative;
+	left: 10px;
+	color: white;
+	font-size: 14px;
+	margin-top: 6px;
+}
+
+.pic_info_body{
+	background-color: rgba(33,33,33,0.9);
+	border-radius: 0 0 3px 3px;
+	position: relative;
+	z-index: 0;
+	box-shadow: 0 0 1px rgba(255,255,255,0.3) inset;
+	
+}
+
+.pic_info_map_container ,.pic_info_conv_container{
+	width: 310px;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.07);
+	padding: 10px;
+	padding-top: 0;
+}
+
+.pic_info_map_heading ,.pic_info_conv_heading{
+	color: rgba(255,255,255,0.4);
+	width: 100%;
+	height: 36px;
+	font-size: 14px;
+	line-height: 36px;
+}
+
+.pic_info_map_heading:hover ,.pic_info_conv_heading:hover{
+	font-weight: bold;
+	color: white;
+	cursor: pointer;
+}
+
+.pic_info_map{
+	height: 200px;
+	background-image: url(map.png);
+	border-radius: 3px;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.2) inset;
+}
+
+.pic_info_conv{
+	position: relative;
+}
+
+
+
+
+
+
+.conv_line{
+	position: absolute;
+	width: 1px;
+	/height: 100%;
+	left: 28px;
+	top: 0;
+	bottom: 9px;
+	background-color: rgba(255,255,255,0.16);
+	display: none
+}
+
+
+.conv_input{
+	display: -moz-box; 
+	display: -webkit-box; 
+	display: box; 
+	position: relative;
+	-webkit-box-orient: horizontal;
+	box-orient:horizonta;
+	width: 100%;
+	/height: 36px;
+	border-radius: 2px 0 0 2px;
+}
+
+.conv_input .conv_portrait{
+	background: url(dzinlife.jpg);
+	background-size: 100%;
+	
+}
+
+.conv_textbox{
+				
+	display: -moz-box; 
+	display: -webkit-box; 
+	display: box;
+	-moz-box-flex: 1; 
+	-webkit-box-flex: 1; 
+	box-flex: 1;
+	height: 16px;
+	margin-left: 35px;
+	margin-right: 0;
+	border: none;
+	background-color: #aaa;
+	padding: 6px 8px;
+	resize: none;
+	border-radius: 2px;
+	color: #333;
+	-webkit-transition: all 0.1s ease-in-out 0s;
+	font: 14px/18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.conv_textbox::-webkit-input-placeholder{
+	font-size: 14px;
+	color: rgba(0,0,0,0.5);
+}
+
+.conv_textbox:hover{
+	background-color: white;
+}
+
+.conv_textbox:focus{
+	height: 50px;
+	background-color: white;
+	outline: none;
+	padding-bottom: 16px;
+}
+
+.conv_send{
+	position: absolute;
+	width: 15px;
+	height: 11px;
+	right: 7px;
+	bottom: 6px;
+	background: url(enter_blue.png) no-repeat;
+	background-size: 100%;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s ease-in-out 0s;
+}
+
+.conv_textbox:focus ~ .conv_send{
+	opacity: 1;
+}
+
+.conv_portrait{
+	display: inline-block;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 2px;
+}
+
+.conv_cell{
+	position: relative;
+	margin-top: 16px;
+	width: 100%;
+}
+
+.conv_cell:hover  .conv_time{
+	opacity: 1;
+}
+
+.conv_chat{
+	display: inline-box;
+	margin-left: 34px;
+	font-size: 14px;
+	color: #aaa;
+	padding-top: 2px;
+	min-height: 24px;
+	line-height: 18px;
+}
+
+.conv_time{
+	float: right;
+	font-size: 12px;
+	color: #aaa;
+	opacity: 0;
+	-webkit-transition: all 0.1s ease-in-out 0s;
+}
+
+.conv_name{
+	font-weight: bold;
+	/display: block;
+}
+
+.conv_name:after{
+	content: ' : ';
+	font-weight: normal;
+}
+
+.conv_1 .conv_portrait{
+	background-image: url(dzinlife.jpg);
+}
+
+.conv_2 .conv_portrait{
+	background-image: url(blue.jpg);
+}
+
+.conv_3 .conv_portrait{
+	background-image: url(girl.jpg);
+}
+
+.conv_4 .conv_portrait{
+	background-image: url(red.png);
+}
+
+
+
+
+
+
+
+
+
+

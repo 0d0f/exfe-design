@@ -1,0 +1,341 @@
+body,html{
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	color: white;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+.bg{
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: -moz-linear-gradient(90deg, #aee1f8 0%, #69b4df 3.5%, #3c8cbd 8%, #206da3 12.5%, #185282 18.3%, #15426d 22.7%, #0b365e 29.5%, #021e3b 75.1%, #01172f 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#aee1f8), color-stop(0.035, #69b4df), color-stop(0.08, #3c8cbd), color-stop(0.125, #206da3), color-stop(0.183, #185282), color-stop(0.227, #15426d), color-stop(0.295, #0b365e), color-stop(0.751, #021e3b), to(#01172f));
+}
+
+
+.fade{
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(2, 29, 59, 0) 86.2%, rgba(1, 25, 52, 0.46) 93.2%, rgb(0, 22, 47) 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), color-stop(0.862, rgba(2, 29, 59, 0)), color-stop(0.932, rgba(1, 25, 52, 0.46)), to(rgb(0, 22, 47)));
+}
+
+.home-intro{
+	width: 100%;
+	height: 1000px;
+	position: relative;
+}
+
+.home-intro b{
+	font-size: 42px;
+	font-weight: 500;
+}
+
+.home-intro em{
+	font-style: normal;
+	font-weight: 300;
+	font-size: 32px;
+}
+
+.home-intro small{
+	font-weight: 400;
+	font-size: 18px;
+	margin-left: 10px;
+}
+
+.intro-title{
+	width: 170px;
+	margin: 0 auto;
+	position: relative;
+	right: -10px;
+}
+
+.intro-0{
+	position: absolute;
+	left: 50%;
+	margin-left: -225px;
+	width: 450px;
+	top: 0px;
+}
+
+.intro-0-container{
+	position: relative;
+	left: 50%;
+	margin-left: -225px;
+	width: 450px;
+	height: 100px;
+	margin-top: 50px;
+}
+
+.intro-0-sticky{
+position: fixed;
+margin-top: 0;
+top: 20;
+}
+
+.intro-0-bottom{
+	position: relative;
+}
+
+.intro{
+	position: absolute;
+	width: 100%;
+	/height: 1000px;
+}
+
+
+.intro .img{
+	position: absolute;
+}
+
+.intro .text{
+	position: absolute;
+	width: 640px;
+	font-weight: 300;
+	font-size: 24px;
+	color: white;
+	left: 50%;
+	margin-left: -80px;
+}
+
+.intro-1-warpper{
+	width: 100%;
+	height: 500px;
+}
+
+.intro-1{
+	position: absolute;
+	width: 500px;
+	height: 220px;
+	left: 50%;
+	margin-left: -250px;
+	background: url(intro_gather@2x.png) no-repeat 50% 50% rgba(255,255,255,0.0);
+	background-size: 100%;
+}
+
+.intro-2{
+	height: 500px;
+	/background-color: black;
+}
+
+.intro-2 .img{
+	width: 300px;
+	height: 500px;
+	right: 50%;
+	margin-right: 120px;
+	background: url(intro_mail@2x.png) no-repeat;
+	background-size: 100%;
+}
+
+.intro-2 .text{
+	height: 300px;
+	margin-top: 110px;
+	background-size: 100%;
+	/background-color: blue;
+}
+
+.intro-3{
+	height: 600px;
+	/background-color: black;
+}
+.intro-3 .img{
+	width: 230px;
+	height: 500px;
+	right: 50%;
+	margin-right: 140px;
+	background: url(intro_connect@2x.png) no-repeat 50% 50%;
+	background-size: 100%;
+}
+
+.intro-3 .text{
+	margin-top: 150px;
+}
+
+.intro-4{
+	height: 440px;
+}
+
+.intro-4 .img{
+	width: 280px;
+	height: 500px;
+	right: 50%;
+	margin-right: 120px;
+	background: url(intro_private@2x.png) no-repeat;
+	background-size: 100%;
+}
+
+.intro-4 .text{
+	margin-top: 30px;
+}
+
+.intro-5{
+	height: 600px;
+}
+
+.intro-5 .img{
+	width: 100px;
+	height: 500px;
+	right: 50%;
+	margin-right: 200px;
+	background: url(intro_rocket@2x.png) no-repeat;
+	background-size: 100%;
+}
+
+.intro-5 .text{
+	margin-top: 40px;
+}
+
+.intro-5 small{
+	font-size: 14px;
+	display: block;
+	margin-left: 0;
+}
+
+.logo-warpper{
+	height:220px;
+	width: 220px;
+	position: relative;
+	margin-left: 50%;
+	left: -110px;
+}
+
+.logo{
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -110px;
+	height: 220px;
+	width: 220px;
+	background: url(exfe_220@2x.png) no-repeat 50% 50%;
+	background-size: 100%;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	z-index: 1;	
+}
+ 
+.logo-light{
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -220px;
+	height: 440px;
+	width:440px;
+	top: -110px;
+	background: url(exfe_light@1.5x.png) no-repeat 50% 50%;
+	background-size: 100%;
+	z-index: 0;
+	-webkit-transition: all 0.2s ease-in-out 0s;
+}
+
+.logo-bloom{
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -110px;
+	width: 220px;
+	height: 220px;
+	background: url(exfe_bloom@2x.png) no-repeat 50% 50%;
+	background-size: 100%;
+	-webkit-transition: all 0s ease-in-out 0s;
+}
+
+.logo-highlight{
+	margin: 0 auto;
+	position: absolute;
+	left: 50%;
+	margin-left: -110px;
+	width: 220px;
+	height: 220px;
+	background: url(exfe_bloom@2x.png) no-repeat 50% 50%;
+	background-size: 100%;
+	opacity: 0;
+	-webkit-transition: all 0.233s ease-out 0s;
+}
+
+.logo:hover ~ .logo-light{
+	-webkit-transform: scale(1.06);
+}
+
+.logo:hover ~ .logo-highlight{
+	opacity: 0.5;
+	-webkit-transform: scale(1.1);
+}
+
+.start-btn{
+	position: fixed;
+	bottom: 80px;
+	width: 140px;
+	height: 36px;
+	left: 50%;
+	margin-left: -70px;
+	border-radius: 18px;
+	border-style: none;
+	background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.81) 100%) transparent;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.95)), to(rgba(255, 255, 255, 0.81))) transparent;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+	color: #333;
+	text-align: center;
+	font: 200 20px/34px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	-webkit-transition: all 0.05s ease-in-out 0s;
+}
+
+.start-btn:hover{
+	background-color: white;
+}
+
+.start-btn:active{
+	background: -moz-linear-gradient(90deg, rgba(217, 217, 217, 0.94) 0%, rgba(156, 156, 156, 0.81) 100%) transparent;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(217, 217, 217, 0.94)), to(rgba(156, 156, 156, 0.81))) transparent;
+}
+
+.more{
+	position: fixed;
+	width: 6px;
+	height: 30px;
+	left: 50%;
+	margin-left: -3px;
+	bottom: 15px;
+}
+
+.more_dot{
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background-color: white;
+	margin-bottom: 6px;
+	-webkit-animation: more 3s ease-in-out 0s infinite;
+}
+
+@-webkit-keyframes more{
+	0%{
+		opacity: 0.8;
+		
+	}
+	
+	25%{
+		opacity: 1;
+		box-shadow: 0px 0px 4px white,
+					0px 0px 0px 1px white;
+	}
+	
+	50%{
+		opacity: 0.8;
+		box-shadow: 0px 0px 0px;
+	}
+	100%{
+		opacity: 0.8;
+	}
+}
+
+.more_dot2{
+	-webkit-animation-delay: 0.2s;
+}
+
+.more_dot3{
+	-webkit-animation-delay: 0.4s;
+}
